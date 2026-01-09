@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- LMS Quiz SEB Config (Localhost Demo) -->
+
+  <key>startURL</key>
+  <string>http://localhost:5173/quiz/SE2025</string>
+
+  <!-- Kiosk mode -->
+  <key>enableKioskMode</key><true/>
+  <key>kioskMode</key><integer>1</integer>
+  <key>createNewDesktop</key><true/>
+  <key>killExplorerShell</key><true/>
+
+  <!-- UI restrictions -->
+  <key>showAddressBar</key><false/>
+  <key>showReloadButton</key><false/>
+  <key>showNavigationButtons</key><false/>
+  <key>allowBrowsingBackForward</key><false/>
+  <key>newBrowserWindowByLink</key><false/>
+  <key>newBrowserWindowByScript</key><false/>
+
+  <!-- Clipboard -->
+  <key>allowClipboard</key><false/>
+
+  <!-- Screen / tools -->
+  <key>allowScreenCapture</key><false/>
+  <key>allowVirtualMachine</key><false/>
+
+  <!-- Quit allowed for demo -->
+  <key>allowQuit</key><true/>
+  <key>showQuitButton</key><true/>
+
+  <!-- URL whitelist -->
+  <key>urlFilterEnable</key><true/>
+  <key>urlFilterRules</key>
+  <array>
+    <dict>
+      <key>action</key><integer>1</integer>
+      <key>expression</key><string>^http://localhost:5173/.*</string>
+      <key>regex</key><true/>
+    </dict>
+    <dict>
+      <key>action</key><integer>0</integer>
+      <key>expression</key><string>.*</string>
+      <key>regex</key><true/>
+    </dict>
+  </array>
+
+  <key>browserUserAgent</key>
+  <string>SEB</string>
+</dict>
+</plist>
